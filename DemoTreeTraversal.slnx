@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DemoTreeTraversal/DemoTreeTraversal.csproj" />
+  <Project Path="TestProject/TestProject.csproj" />
+</Solution>
