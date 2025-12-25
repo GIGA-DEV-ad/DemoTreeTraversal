@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/.vs/DemoTreeTraversal/CopilotIndices/18.0.981.45449/CodeChunks.db
+/.vs/DemoTreeTraversal/CopilotIndices/18.0.981.45449
+/.vs/DemoTreeTraversal.slnx/DesignTimeBuild
+/.vs/DemoTreeTraversal.slnx/FileContentIndex
+/.vs/DemoTreeTraversal.slnx/v18
+/.vs/VSWorkspaceState.json
