@@ -13,6 +13,12 @@ namespace DemoTreeTraversal
             Value = value;
             Children = new List<TreeNode>();
         }
+        public TreeNode(char value)
+        {
+            Value = value.ToString();
+            Children = new List<TreeNode>();
+        }
+
         public void AddChild(TreeNode child)
         {
             Children.Add(child);
@@ -54,3 +60,5 @@ namespace DemoTreeTraversal
         }
     }
 }
+
+
