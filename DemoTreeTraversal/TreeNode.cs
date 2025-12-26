@@ -58,7 +58,41 @@ namespace DemoTreeTraversal
         {
             return Value;
         }
+
+
+        public static async Task<TreeNode> GenerateAlphabetTree()
+        {
+            TreeNode rNode = null;
+            Action<TreeNode> actionRandomNode = (n) => { if (DateTime.Now.Ticks % 5 == 0) rNode = n; };
+
+            TreeNode rootA = new TreeNode("a");
+            Alphabet alphabet = new Alphabet();
+
+            await foreach (var letter in alphabet.GetLettersAsync())
+            {
+                var node = new TreeNode(letter.ToString());
+                if (DateTime.Now.Ticks % 3 == 0)
+                {
+                    rootA.AddChild(node);
+                }
+                else if (rootA.Children.Count > 0)
+                {
+
+                    TreeMethods.TraverseDepth(rootA, actionRandomNode);
+                    if (rNode != null) rNode.AddChild(node);
+                    else rootA.GetChild(rootA.Children.Count - 1).AddChild(node);
+                }
+                else
+                {
+                    rootA.AddChild(node);
+                }
+            }
+
+            return rootA;
+        }
     }
+
+
 }
 
 
